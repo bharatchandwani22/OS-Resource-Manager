@@ -1,0 +1,8 @@
+Algorithm,Avg Turnaround Time,Avg Waiting Time,Avg Response Time,CPU Utilization (%),Throughput (p/unit),Total Time
+FCFS,13.4,8.2,8.2,100.0,0.1923,26
+SJF (Non-Preemptive),11.8,6.6,6.6,100.0,0.1923,26
+SRTF (Preemptive),11.6,6.4,5.8,100.0,0.1923,26
+Round Robin (Q=2),17.8,12.6,2.8,100.0,0.1923,26
+Priority (Non-Preemptive),13.0,7.8,7.8,100.0,0.1923,26
+Priority (Preemptive),12.8,7.6,7.0,100.0,0.1923,26
+MLFQ,17.8,12.6,2.0,100.0,0.1923,26

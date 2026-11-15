@@ -1,0 +1,79 @@
+{
+  "bankers_algorithm": {
+    "process_ids": ["P0", "P1", "P2", "P3", "P4"],
+    "resource_ids": ["A", "B", "C"],
+    "available": [3, 3, 2],
+    "max_matrix": [
+      [7, 5, 3],
+      [3, 2, 2],
+      [9, 0, 2],
+      [2, 2, 2],
+      [4, 3, 3]
+    ],
+    "allocation_matrix": [
+      [0, 1, 0],
+      [2, 0, 0],
+      [3, 0, 2],
+      [2, 1, 1],
+      [0, 0, 2]
+    ]
+  },
+  "sample_requests": {
+    "safe_request": {
+      "process_id": "P1",
+      "request": [1, 0, 2]
+    },
+    "unsafe_request": {
+      "process_id": "P4",
+      "request": [3, 3, 0]
+    }
+  },
+  "rag_graph": {
+    "deadlock_cycle_case": {
+      "request_edges": [
+        ["P1", "R1"],
+        ["P2", "R2"]
+      ],
+      "assignment_edges": [
+        ["R1", "P2"],
+        ["R2", "P1"]
+      ]
+    },
+    "acyclic_safe_case": {
+      "request_edges": [
+        ["P1", "R1"],
+        ["P2", "R2"]
+      ],
+      "assignment_edges": [
+        ["R1", "P3"],
+        ["R2", "P4"]
+      ]
+    }
+  },
+  "multi_instance_deadlock_detection": {
+    "process_ids": ["P0", "P1", "P2", "P3", "P4"],
+    "resource_ids": ["A", "B", "C"],
+    "available": [0, 0, 0],
+    "allocation": [
+      [0, 1, 0],
+      [2, 0, 0],
+      [3, 0, 3],
+      [2, 1, 1],
+      [0, 0, 2]
+    ],
+    "request": [
+      [0, 0, 0],
+      [2, 0, 2],
+      [0, 0, 0],
+      [1, 0, 0],
+      [0, 0, 2]
+    ],
+    "costs": {
+      "P0": 10,
+      "P1": 5,
+      "P2": 25,
+      "P3": 15,
+      "P4": 8
+    }
+  }
+}

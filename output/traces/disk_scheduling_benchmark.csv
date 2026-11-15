@@ -1,0 +1,7 @@
+Algorithm,Initial Head,Total Head Movement,Average Seek Distance
+SSTF,53,236,29.5
+LOOK (UP),53,299,37.38
+C-LOOK,53,322,40.25
+SCAN (UP),53,331,36.78
+C-SCAN,53,382,38.2
+FCFS,53,640,80.0

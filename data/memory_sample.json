@@ -1,0 +1,22 @@
+{
+  "contiguous_allocation": {
+    "blocks": [
+      [1, 100],
+      [2, 500],
+      [3, 200],
+      [4, 300],
+      [5, 600]
+    ],
+    "requests": [
+      ["P1", 212],
+      ["P2", 417],
+      ["P3", 112],
+      ["P4", 426]
+    ]
+  },
+  "page_replacement": {
+    "standard_reference_string": [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1],
+    "belady_anomaly_string": [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5],
+    "frames": 3
+  }
+}
